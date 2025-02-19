@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Notepad</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Secure Notepad</h1>
+    <p id="noteTitle"></p>
+
+    <div id="tabs">
+      <button id="addTabBtn">+ Add Tab</button>
+    </div>
+
+    <textarea id="note" placeholder="Type your note here..."></textarea>
+
+    <div class="controls">
+      <button id="encryptBtn">Save Note</button>
+      <button id="deleteTabBtn">Delete Tab</button>
+      <button id="backBtn">Back</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

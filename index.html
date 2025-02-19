@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Notepad - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Secure Notepad</h1>
+    <p>Enter a unique URL and password to access or create a note.</p>
+    <input type="text" id="noteUrl" placeholder="Enter a unique note name">
+    <input type="password" id="password" placeholder="Enter password">
+    <button id="accessBtn">Access Note</button>
+    <p id="message"></p>
+  </div>
+  <script>
+    document.getElementById("accessBtn").addEventListener("click", function(){
+      const noteUrl = document.getElementById("noteUrl").value.trim();
+      const password = document.getElementById("password").value;
+
+      if (!noteUrl || !password) {
+        document.getElementById("message").innerText = "Please enter a URL and password.";
+        return;
+      }
+
+      window.location.href = `notepad.html?url=${encodeURIComponent(noteUrl)}&password=${encodeURIComponent(password)}`;
+    });
+  </script>
+</body>
+</html>
